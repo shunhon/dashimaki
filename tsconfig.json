@@ -5,9 +5,13 @@
     "outDir": "./lib",
     "strict": true,
     "noImplicitAny": false,
-    "baseUrl": "./",
+    "baseUrl": "./src",
+    "rootDir": "./src",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationDir": "./lib/@types"
+  },
+  "include": ["src/**/*"]
 }
