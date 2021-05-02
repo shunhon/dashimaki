@@ -7,16 +7,16 @@ export class PipelineRunner<RootTaskInput, RootTaskOutput> {
     this.target = target;
   }
 
-  private _run<T, U>(task: Task<T, U>) {
+  private async _run<T, U>(task: Task<T, U>) {
     for (const dependency of task.dependencies) {
       this._run(dependency);
     }
     console.log(`Start task: ${task.getTaskName()}(${task.getTaskId()})`);
-    task.run();
+    await task.run();
   }
 
-  public run(): RootTaskOutput {
-    this._run(this.target);
+  public async run(): Promise<RootTaskOutput> {
+    await this._run(this.target);
     return this.target.output();
   }
 }

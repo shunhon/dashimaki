@@ -37,5 +37,5 @@ export abstract class Task<Input, Output> {
 
   public abstract output(): Output;
 
-  public abstract run(): void;
+  public abstract run(): Promise<void>;
 }
