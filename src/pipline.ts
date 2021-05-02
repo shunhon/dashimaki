@@ -11,7 +11,6 @@ export class PipelineRunner<RootTaskInput, RootTaskOutput> {
     for (const dependency of task.dependencies) {
       this._run(dependency);
     }
-    console.log(`Start task: ${task.getTaskName()}(${task.getTaskId()})`);
     await task.run();
   }
 
