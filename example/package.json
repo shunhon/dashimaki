@@ -1,0 +1,14 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^15.0.1",
+    "@types/uuid": "^8.3.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "dashimaki": "^0.0.1"
+  }
+}
