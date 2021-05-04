@@ -9,23 +9,23 @@ export abstract class Task<Input, Output> {
     this._dependencies = [];
   }
 
-  public get dependencies() {
+  public get dependencies(): Task<unknown, Input>[] {
     return this._dependencies;
   }
 
-  public get name() {
+  public get name(): string {
     return this.constructor.name;
   }
 
-  public get id() {
+  public get id(): string {
     return this._id;
   }
 
-  public conditions() {
+  public conditions(): boolean {
     return true;
   }
 
-  public dependsOn(task: Task<unknown, Input>) {
+  public dependsOn(task: Task<unknown, Input>): void {
     this.dependencies.push(task);
   }
 
