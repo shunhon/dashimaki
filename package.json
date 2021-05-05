@@ -1,11 +1,16 @@
 {
   "name": "dashimaki",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "description": "Dashimaki - Pipeline builder for TypeScript.",
   "main": "lib/index.js",
   "types": "lib/@types/index.d.ts",
   "repository": "git@github.com:shunhon/dashimaki.git",
   "author": "shunhon <shun.honda.development@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "typescript",
+    "pipeline"
+  ],
   "scripts": {
     "lint": "eslint ./src",
     "build": "tsc",
